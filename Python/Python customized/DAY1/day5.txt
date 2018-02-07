@@ -1,0 +1,207 @@
+day 5
+
+Files I/O
+
+open 
+r- read
+rb- read in binary format
+r+  read and write mode cursor at first position
+a open files in append mode
+a+ read and open
+
+>>> o.read()
+'welcome to accenture\nwelcome to python'
+
+>>> o.tell()
+39
+
+>>> o=open("c:/test/demo.txt ",'r')
+>>> o.mode()
+Traceback (most recent call last):
+  File "<pyshell#2>", line 1, in <module>
+    o.mode()
+TypeError: 'str' object is not callable
+>>> o.mode
+'r'
+>>> o.read()
+'welcome to accenture\nwelcome to python'
+>>> o.read()
+''
+>>> o.tell()
+39
+>>> o.seek(0,0)
+0
+>>> o.read()
+'welcome to accenture\nwelcome to python'
+>>> o.seek(0.1)
+0.1
+>>> o.read()
+'welcome to accenture\nwelcome to python'
+>>> o.seek(0,2)
+39
+>>> o.read()
+''
+>>> o.seek(0,0)
+0
+>>> o.read()
+'welcome to accenture\nwelcome to python'
+>>> o.seek(2,0)
+2
+>>> o.read()
+'lcome to accenture\nwelcome to python'
+>>> o.close()
+
+import os
+os.rename("c:/test/demo.txt","sam.txt")
+
+>>> o=open("c:/test/demo.txt ",'a+')
+>>> o.write("welcome to accenture\nwelcome to python")
+38
+>>> o.read()
+''
+>>> o.seek(0,0)
+0
+>>> o.readline()
+'welcome to accenture\n'
+>>> o.readlines()
+['welcome to python']
+>>> o.seek(0,0)
+0
+>>> o.readlines()
+['welcome to accenture\n', 'welcome to python']
+>>> o.seek(0,0)
+0
+>>> mlst=o.readlines()
+>>> mlst
+['welcome to accenture\n', 'welcome to python']
+
+o=open("c:/test/demo.txt ",'w')
+>>> o.writelines(mlst)
+>>> o.close()
+
+
+
+
+obj.closed()
+obj.mode()
+obj.name()
+
+
+
+
+
+
+fobj=open('c:/python/day5demo.txt','w')
+>>> fobj.write("welcome to accenture")
+20
+>>> fobj.close()
+
+
+read
+
+
+write
+append
+
+close
+
+Working with excel spreadsheets
+C:\windows\system32>pip install xlrd
+Collecting xlrd
+  Downloading xlrd-1.0.0-py3-none-any.whl (143kB)
+    100% |################################| 153kB 1.1MB/s
+Installing collected packages: xlrd
+Successfully installed xlrd-1.0.0
+
+import xlrd
+
+fileloc="c:/test/demoex.xlsx"
+>>> xlsfile=xlrd.open_workbook(fileloc)
+>>> sheet=xlsfile.sheet_by_index(0)
+>>> sheet.cell_value(2,2)
+'CDC'
+>>> sheet.nrows
+6
+>>> sheet.ncols
+for col in range(sheet.ncols):
+	print(sheet.cell_value(0,col))
+
+
+for ro in range(sheet.nrows):
+	print(sheet.cell_value(ro,0))
+
+	
+slno
+1.0
+2.0
+3.0
+4.0
+5.0
+sheet.name
+'Sheet1'
+	
+slno
+Name 
+location
+
+for x in range(sheet.nrows):
+	for y in range(sheet.ncols):
+		record.append(sheet.cell_value(x,y))
+	table.append(record)
+	record=[]
+	x+=1
+
+	
+>>> print(table)
+[['slno', 'Name ', 'location'], [1.0, 'Mathan', 'CDC'], [2.0, 'Sekar', 'CDC'], [3.0, 'Arun', 'MDC'], [4.0, 'Chetan', 'BDC'], [5.0, 'Govind', 'DDC']]
+>>> 
+
+Working with pdf and word documents
+
+Working with CSV files and JSON data
+
+import csv
+>>> with open("C:/test/democsv.csv",'r') as f:
+	r=csv.reader(f,delimiter=',')
+	for row in r:
+		print(row)
+
+		
+['slno', 'name', 'location']
+['1', 'mathan', 'cdc']
+['2', 'arun', 'cdc']
+['3', 'selva', 'mdc']
+
+JSON
+
+abook={}
+abook['mathan']={
+    'name':'mathan',
+    'address':'CDC',
+    'Phno':9003769147
+}
+
+abook['sam']={
+    'name':'sam',
+    'address':'CDC',
+    'Phno':9003769147
+}
+
+import json
+s=json.dumps(abook)
+type(s)
+print(s)
+
+with open("c://test//abook.txt","w")as f:
+    f.write(s)
+
+fob=open("c://test//abook.txt","r")
+ob=fob.read()
+ob
+import json
+abook=json.loads(ob)
+
+for person in abook:
+    print(abook[person])
+
+    

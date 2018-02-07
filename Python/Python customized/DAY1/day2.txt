@@ -1,0 +1,186 @@
+day2
+
+today we are going to discuss about string, operator, Sets, List, Tuples.
+
+operators
+>>> 9<10
+True
+>>> 9<10 and 9!=10
+True
+>>> 9<10 or 9!=10
+True
+>>> 9<10 and 9==10
+False
+>>> s="abcde"
+>>> a in s
+False
+>>> 'a' in s
+True
+>>> a=10
+>>> b=10
+>>> a is b
+True
+>>> a = [1,3,4]
+>>> b= [1,3,4]
+>>> a is b
+False
+>>> a in b
+False
+>>> a = c
+>>> a = [1,3,4]
+>>> c= a
+>>> a is ca
+True
+
+
+
+Strings:
+
+as i said string are immutable
+it means we cant modify the string
+	
+
+a = 'i want ice cream'
+b = "I want ice cream" 
+c="""I want ice cream"""
+
+print(a)
+print(b)
+print(c)
+
+\n
+\
+\\
+
+
+str(10)
+str(a+b)
+
+json
+
+
+endswidth
+capitalize
+count
+find 
+islower()
+isupper()
+split
+sort
+
+List
+general purpose. Most widly used data structure. grow andshrink the size as needed 
+sequence type.mli
+ sortable
+
+>>> mlist=[1,2,3,"sample",3.2]
+>>> mlist
+[1, 2, 3, 'sample', 3.2]
+>>> print(len(mlist))
+5
+>>> mlist.index(3.2)
+4
+>>> mlist.append("sam")
+>>> mlist
+[1, 2, 3, 'sample', 3.2, 'sam']
+>>> mlist.insert(2,4.7)
+>>> mlist
+[1, 2, 4.7, 3, 'sample', 3.2, 'sam']
+>>> mlist.remove(3)
+>>> mlist
+[1, 2, 4.7, 'sample', 3.2, 'sam']
+>>> 	mlist.reverse()
+
+
+my_list = ['p','r','o','b','e']
+
+# Output: e
+print(my_list[-1])
+
+# Output: p
+print(my_list[-5])
+
+my_list = ['p','r','o','g','r','a','m','i','z']
+# elements 3rd to 5thmlist
+print(my_list[2:5])
+
+# elements beginning to 4th
+print(my_list[:-5])
+
+# elements 6th to end
+print(my_list[5:])
+
+# elements beginning to end
+print(my_list[:])
+	
+SyntaxError: unexpected indent
+>>> mlist.reverse()
+>>> mlist
+['sam', 3.2, 'sample', 4.7, 2, 1]
+>>> nlist=mlist
+>>> nlist
+['sam', 3.2, 'sample', 4.7, 2, 1]
+>>> nlist=mlist.copy()
+>>> nlist
+['sam', 3.2, 'sample', 4.7, 2, 1]
+>>> nlist.sort()
+
+ del a[2:4]
+
+
+Tuple
+Immutable
+useful for fixed data
+faster than list
+sequence type
+
+Tuples
+Tuples are fixed size in nature
+but list are dynamic
+List is mutable
+Tuples is immutable
+you can't add method to the tuple. there is no append or extend method in tuple
+you cant't remove element from the tuple. there is no remove or pop method in tuple
+you can find the element in tuple
+you can use the in operator to check if the element in 
+
+mtup=(1,2,3,5,"sma")
+print(mtup
+
+import sys
+
+
+mlist=[1,2,3,5,True,"a","sam",2.32]
+mtup=(1,2,3,5,True,"a","sam",2.32)
+sys.getsizeof(mlist)
+sys.getsizeof(mtup)
+
+
+set
+non duplicate items
+very fast access
+unordered
+math set operation 
+
+set 
+
+set.add
+
+
+set.remove
+
+
+set .discard
+
+set.clear
+
+odds=([1,3,5,7,9])
+even=([2,4,6,8,10])
+primeno([2,3,5,7])
+
+>>> odds.union(primes)
+>>>odds.intersection(primes)
+
+
+
+

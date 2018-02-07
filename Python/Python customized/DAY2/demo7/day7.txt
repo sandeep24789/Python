@@ -1,0 +1,178 @@
+Decorators
+
+inner function
+
+def parentFun(num):
+    
+    def childFun1():
+        print("Hello")
+        
+    def childFun2():
+        print("World")
+    
+    if num > 10:
+        return childFun1
+    else:
+        return childFun2
+
+op = parentFun(10)
+op()
+
+decorator
+
+def mydec(f):
+    def wrapper():
+        print("Before calling the function from decorator")
+        f()
+        print("After calling the function from decorator")
+
+    return wrapper
+
+@mydec
+def disp():
+    print("welcome to python decorator")
+
+disp()
+    
+
+decorator
+
+
+import time
+
+def calcsum(a,b):
+    start=time.time()
+    result =a+b
+    print(result)
+    end=time.time()
+    print("calcsum took"+ str((end-start)*1000))
+    
+
+def calcsub(a,b):
+    start=time.time()
+    result= a-b
+    print(result)
+    end=time.time()
+    print("calcsum took"+ str((end-start)*1000))
+
+    
+calcsum(10,20)
+calcsub(10,20)
+
+
+Defining context managers
+with keyword
+
+with open("welcome.txt",'w') as f:
+	f.write('welcome to python')
+
+	
+17
+try:
+	f.write('hello')
+finally:
+	f.close()
+
+	
+5
+
+
+class filemanage:
+    def __init__(self,name):
+        self.name=name
+
+    def __enter__(self):
+        self.file=open(self.name,'w')
+        return self.file
+
+    def __exit__(self, exc_type, exc_val,exc_tb):
+        if self.file:
+            self.file.close()
+
+
+with filemanage as f:
+	f.write("weclodfe")
+
+
+
+from contextlib import contextmanager
+@contextmanager
+def filemanage(name):
+    try:
+        f=open(name,'w')
+        yield f
+    finally:
+        f.close()
+
+        
+
+with filemanage("welcome.txt") as f:
+	f.write("welcome to cdc")
+
+
+Reg Expressions
+
+123 main st.
+
+\d{1,5} - Digits
+\s - space
+\w - charater
+\w+ = one or more char
+\s
+\w+
+\.
+\b 
+? 0 or 1 repetitions
+* o or more repetition
+{n} 
+
+\$\d*\1.\d{2}
+$100.00
+
+\e Escape
+\n Newline
+\t tab
+
+
+
+
+^	Matches beginning of line.
+$	Matches end of line.
+.	Matches any single character except newline. Using m option allows it to match newline as well.
+[...]	Matches any single character in brackets.
+[^...]	Matches any single character not in brackets
+re*	Matches 0 or more occurrences of preceding expression.
+re+	Matches 1 or more occurrence of preceding expression.
+re?	Matches 0 or 1 occurrence of preceding expression.
+re{ n}	Matches exactly n number of occurrences of preceding expression.
+re{ n,}	Matches n or more occurrences of preceding expression.
+re{ n, m}	Matches at least n and at most m occurrences of preceding expression.
+a| b	Matches either a or b.
+(re)	Groups regular expressions and remembers matched text.
+(?imx)	Temporarily toggles on i, m, or x options within a regular expression. If in parentheses, only that area is affected.
+(?-imx)	Temporarily toggles off i, m, or x options within a regular expression. If in parentheses, only that area is affected.
+(?: re)	Groups regular expressions without remembering matched text.
+(?imx: re)	Temporarily toggles on i, m, or x options within parentheses.
+(?-imx: re)	Temporarily toggles off i, m, or x options within parentheses.
+(?#...)	Comment.
+(?= re)	Specifies position using a pattern. Doesn't have a range.
+(?! re)	Specifies position using pattern negation. Doesn't have a range.
+(?> re)	Matches independent pattern without backtracking.
+\w	Matches word characters.
+\W	Matches nonword characters.
+\s	Matches whitespace. Equivalent to [\t\n\r\f].
+\S	Matches nonwhitespace.
+\d	Matches digits. Equivalent to [0-9].
+\D	Matches nondigits.
+\A	Matches beginning of string.
+\Z	Matches end of string. If a newline exists, it matches just before newline.
+\z	Matches end of string.
+\G	Matches point where last match finished.
+\b	Matches word boundaries when outside brackets. Matches backspace (0x08) when inside brackets.
+\B	Matches nonword boundaries.
+\n, \t, etc.	Matches newlines, carriage returns, tabs, etc.
+\1...\9	Matches nth grouped subexpression.
+\10	Matches nth grouped subexpression if it matched already. Otherwise refers to the octal representation of a character code.
+
+
+'welcome\s\w+\s'

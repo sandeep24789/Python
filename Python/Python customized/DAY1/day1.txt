@@ -1,0 +1,186 @@
+Day 1
+
+Overview
+	10 days 
+	About python
+		Python is a very simple scripting language
+		it support object oriented
+		interperted language - process at run time no need to compile
+		Easy to learn
+		GNU
+		
+		
+Environment setup
+
+http://pythontutor.com/live.html#mode=edit
+https://www.python.org/downloads/windows/
+https://repl.it/languages/python3
+https://www.jetbrains.com/pycharm/download/#section=windows
+path is important
+
+demo to print 
+print("welcome to python")
+
+In python you no need to use semicolon
+
+In python older version like 2.x we no need to give parnthiesi but in 3.x version  we must provide this paranthesis
+
+python GUI - idle
+pycham
+
+
+
+
+Basic syntax
+>>> Python execute as REPL
+Read 
+Execute
+Print
+Loop
+>>>2+2
+>>>8*7
+>>>-76+43
+>>>25/7
+3
+>>>25//7
+
+exponent 2*2*2
+2**12
+
+order of execution
+PEMDAS
+p -Paranthesis
+E-  Exponent
+M -Multiple
+D- Divide
+A- Add
+S- Sub
+
+(2+4) * 4 / (6-2)
+Variables
+Variable is a container for the values
+python is a case sensitive language
+>>>sam=6
+>>>sam
+6
+>>>sam +67
+special variable _ will print the recent value print in repl
+>>> _
+6
+>>> _ + 3
+9
+
+if you want to get data from a user using standard input device
+>>>a = input("enter the value")	
+>>>a
+>>>a+21
+it will show a error
+to get the data as int we have to type cast
+>>> a= int(input("enter the value"))
+>>> a * 2
+>>>a= float	(input("enter the value"))
+
+
+>>> print("Sample String")
+() is requried from python 3 versions
+String
+>>> 'welcome to python'
+>>>"welcome to python"
+>>> """welcome to python"""
+
+>>> 'welcome to don'\t'	
+\ is a escape charater
+to print escape charter \\
+
+to print the length of the string len(a)
+
++ in string is concat the string
+
+if you want to print the string n times
+
+>>>a * 100
+n=10
+a="hello"
+>>> n + a 
+>>>error
+to solve it >>>(str(10) + a)
+
+Variable types
+
+Save and run
+
+
+
+Basic operators
+Decision making
+
+if condition:
+    print ("True")
+else:
+    print ("false")
+
+
+ if(x<0):
+	print ("abc")
+elif(x>0):
+	print("xyz")
+else:
+	print("ijk")
+
+	
+Loops
+
+count = 0
+while (count < 9):
+   print 'The count is:', count
+   count = count + 1
+
+while loop with else
+
+count = 0
+while count < 5:
+   print count, " is  less than 5"
+   count = count + 1
+else:
+   print count, " is not less than 5"
+
+for loop
+
+for iterating_var in sequence:
+   statements(s)
+
+for w in words:
+     print(w, len(w))
+
+
+range()
+
+
+
+
+
+
+Day 2
+
+Strings
+Sets
+Lists
+Tuples
+
+Day 3
+
+Dictionary
+Implementing collections
+Iterables and iterations
+Date & Time
+
+Day 4 
+
+Functions
+
+Day 5
+
+Files I/O
+Working with excel spreadsheets
+Working with pdf and word documents
+Working with CSV files and JSON data

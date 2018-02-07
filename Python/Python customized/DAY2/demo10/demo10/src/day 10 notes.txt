@@ -1,0 +1,156 @@
+Organizing files
+
+use demos 
+
+Sched
+
+import sched
+import time
+
+scheduler = sched.scheduler(time.time, time.sleep)
+
+def print_event(name):
+    print 'EVENT:', time.time(), name
+
+print 'START:', time.time()
+scheduler.enter(2, 1, print_event, ('first',))
+scheduler.enter(3, 1, print_event, ('second',))
+
+scheduler.run()
+
+
+
+
+
+import sched
+import time
+
+scheduler = sched.scheduler(time.time, time.sleep)
+
+def long_event(name):
+    print 'BEGIN EVENT :', time.time(), name
+    time.sleep(2)
+    print 'FINISH EVENT:', time.time(), name
+
+print 'START:', time.time()
+scheduler.enter(2, 1, long_event, ('first',))
+scheduler.enter(3, 1, long_event, ('second',))
+
+scheduler.run()
+
+
+
+
+import sched
+import time
+
+scheduler = sched.scheduler(time.time, time.sleep)
+
+def print_event(name):
+    print 'EVENT:', time.time(), name
+
+now = time.time()
+print 'START:', now
+scheduler.enterabs(now+2, 2, print_event, ('first',))
+scheduler.enterabs(now+2, 1, print_event, ('second',))
+
+scheduler.run()
+
+
+
+
+
+
+	
+a= scheduler.enter(delay, priority, action, argument=(), kwargs={})
+
+b=scheduler.enterabs(time, priority, action, argument=(), kwargs={})
+scheduler.cancel(b)
+scheduler.empty
+scheduler.run()
+scheduler.queue()
+
+
+
+Manipulating images
+
+
+pip install Pillow
+
+demos
+
+
+
+
+
+
+Unit Test
+unittest
+pytest
+
+
+
+
+ 
+python -m pytest
+
+cmd
+
+py.test
+
+py.test
+py.test -v
+demos
+
+
+
+
+
+Virtual Environments
+
+virtualenv is used to set your different python environments for different projects
+
+used to enable required packages in the python environment
+
+pip install virtualenv
+
+pip install virtualenv
+virtualenvwrapper-win
+
+setprojectdir
+
+
+pip list
+
+mkdir environment
+ cd environment
+create environment --> virutalenv project1_env
+
+
+activate the enviroment --> source project1_env/bin/activate
+
+
+which python
+
+which pip
+
+pip list 
+
+pip install numpy
+pip install pytz
+pip install psutil
+
+pip list
+
+
+pip freeze -- local > requirement.txt
+
+deactivate
+
+
+
+
+
+
+
+Distributing python programs

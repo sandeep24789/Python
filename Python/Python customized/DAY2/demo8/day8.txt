@@ -1,0 +1,45 @@
+Database access
+
+connect  
+.close() 
+.commit  () 
+.rollback  () 
+.cursor  () 
+	.description 
+	.rowcount 
+.execute  (  operation  [,  parameters  ]) 
+.executemany  (  operation  ,  seq_of_parameters  )
+.fetchone  () 
+.fetchmany  ([  size=cursor.arraysize  ]) 
+.fetchall  () 
+.nextset  () 
+.arraysize 
+
+
+pip install pymysql
+
+Networking
+Server Socket Methods
+s.bind() This method binds address (hostname, port number pair) to socket. 
+s.listen() This method sets up and start TCP listener. 
+s.accept() This passively accept TCP client connection, waiting until connection arrives (blocking). 
+
+Client Socket Methods
+
+s.connect() This method actively initiates TCP server connection 
+
+General Socket Methods
+s.recv() This method receives TCP message 
+s.send() This method transmits TCP message 
+s.recvfrom() This method receives UDP message 
+s.sendto() This method transmits UDP message 
+s.close() This method closes socket 
+socket.gethostname() Returns the hostname. 
+
+Sending email
+
+[?5/?4/?2017 10:09 AM] Jha, Shivani P.: 
+https://www.hmailserver.com/download 
+
+XML Processing
+

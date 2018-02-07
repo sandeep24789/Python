@@ -1,0 +1,18 @@
+DS
+LIST - mutable -> default type
+TUPLES - immutable -> useful for fixed data , faster than list , no add method
+SET - unordered , non duplicate items , very fast access 
+DICT
+STRING
+ARRAY
+
+Keys are immutable , values are mutable
+
+
+read r
+red binary rb
+r+
+a - append mode
+a+ 
+
+welcome to python

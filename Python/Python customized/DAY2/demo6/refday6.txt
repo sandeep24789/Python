@@ -1,0 +1,138 @@
+Classes/Objects
+
+class Sample:
+	def setdata(self,empId,empName):
+ 	    self.empId=empId
+	    self.empName=empName
+	def getdata(self)
+	    print(self.empId)
+	    print(self.empName)
+
+obj=Sample()
+obj.setdata(101,"Mathan")
+obj.getdata()
+print(hasattr(obj,"getdata"))
+print(getattr(obj,"getdata"))
+print(getattr(obj,"empId"))
+
+
+
+dir(Sample)
+
+print(Sample.__doc__)
+print(Sample.__name__)
+print(Sample.__module__)
+
+dir(obj)
+print(obj.__class__)
+
+__del__
+
+
+Inheritence and sub type polymorphism
+
+refer code
+
+
+
+
+Multithreading
+
+refer code
+
+Exceptions and Debugging
+
+Python 3.6.0 (v3.6.0:41df79263a11, Dec 23 2016, 07:18:10) [MSC v.1900 32 bit (Intel)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>> 
+====================== RESTART: C:\PythonDay5\Vector.py ======================
+Vector (7, 13)
+>>> 1/0
+Traceback (most recent call last):
+  File "<pyshell#0>", line 1, in <module>
+    1/0
+ZeroDivisionError: division by zero
+>>> x = {1:2,2:3}
+>>> x[3]
+Traceback (most recent call last):
+  File "<pyshell#2>", line 1, in <module>
+    x[3]
+KeyError: 3
+>>> b
+Traceback (most recent call last):
+  File "<pyshell#3>", line 1, in <module>
+    b
+NameError: name 'b' is not defined
+>>> try:
+	1/0
+except:
+	print('default exception')
+
+	
+default exception
+>>> try:
+	print(b)
+except:
+	print('default exception')
+
+	
+default exception
+>>> try:
+	1/0
+except ZeroDivisionError as e:
+	print(e)
+
+	
+division by zero
+>>> try:
+	print(b)
+except NameError as e:
+	print(e)
+
+	
+name 'b' is not defined
+>>> x = [2,3,4]
+>>> x[3]
+Traceback (most recent call last):
+  File "<pyshell#25>", line 1, in <module>
+    x[3]
+IndexError: list index out of range
+>>> try:
+	print(x[3])
+except KeyError as e:
+	print(e)
+except IndexError as e:
+	print(e)
+except:
+	print('Unknown Exception')
+
+	
+list index out of range
+>>> try:
+	print(x[3])
+except IndexError as e:
+	print(e)
+except:
+	print('Unknown exception')
+finally:
+	print('I will get executed in any case')
+
+	
+list index out of range
+I will get executed in any case
+>>> try:
+	print(x[1])
+except IndexError as e:
+	print(e)
+except:
+	print('Unknown exception')
+finally:
+	print('I will get executed in any case')
+
+	
+3
+I will get executed in any case
+>>> x
+[2, 3, 4]
+>>> 
+

@@ -1,0 +1,174 @@
+day 4
+
+Date & Time
+
+import time
+time.time()
+time.time()
+time.localtime(time.time())
+time.asctime()
+time.sleep(7)
+
+import datetime
+mdate=datetime.date(2017,7,23)
+print(mdate)
+
+tday=datetime.date.today()
+print(tday)
+print(tday.year)
+print(tday.day)
+print(tday.weekday) // monday 0 sunday 6
+print(tday.isoweekday)
+monday  1 sunday 7
+
+bday =datetime.date(1991,2,11)
+age=bday-tday
+print(age.days())
+print(age.total_seconds())
+
+
+
+
+import calendar
+print(calendar.month(1947,3))
+print(calendar.calendar(1999))
+calendar.isleap(2008)
+
+
+Function
+builtin functions
+dir()
+dir(__builtins__)
+_ -> private
+__x -> not able to override
+__x__ ->used by python shell 
+
+2 ** 3
+pow(2,3)
+help
+
+
+dir()
+
+def fuctionname(arg1, arg2, ...):
+	statement 1
+	statement 2
+
+
+>>> x=math.sqrt(5)
+>>> x
+2.23606797749979
+>>> math.pi
+3.141592653589793
+>>> math.tan(90
+	 )
+-1.995200412208242
+>>> def fname(name):
+	print(name)
+
+simple function	
+>>> fname([1,2,4])
+[1, 2, 4]
+>>> def fname(name):
+	for x,y in enumerate(name):
+		print(x, "=", y)
+
+		
+>>> fname(("name",12,45.43))
+0 = name
+1 = 12
+2 = 45.43
+
+def demo(x=10,y):
+	print(x,y)
+
+
+def student(name,*score):
+    print(name)
+    print(score)
+
+student("mathan",89,90,99,97,87)
+
+	
+SyntaxError: non-default argument follows default argument
+simple function
+
+function with return
+function with argument
+function with fixed arugment and default arugment
+function with multiple argument
+lambda
+A simple 1 line function
+do not use def or returen keyword
+use to create very shot easy function
+
+def sam(x):
+    return x*2
+
+lambda x:2*x
+
+def add(x,y)
+  return x+y
+
+lambda x,y:x+y
+
+def maxi(x,y):
+
+if x>y:
+   return x
+else:
+   return y
+
+print(maxi(8,9))
+
+maxi= lambda x,y:x if x>y else y
+maxi(8,9)
+
+Map
+Apply same function to each element of a sequence and it will return a modified list
+
+list[x,y,z] + f() => list[f(x),f(y),f(z)]
+
+def square(lst)
+ lst2=[]
+ for num in lst1:
+   lst2.append(num ** 2)
+return lst2
+
+print(square([3,4,5,6])
+
+
+
+n=[3,4,5,6]
+print(list,(map(lambda x:x**2,n)))
+
+
+Filter
+filter items out of sequence
+return a filter
+
+list[x,y,j] condition c=> list[x,y]
+
+my_list= [1, 5, 4, 6, 8, 11, 3, 12]
+new_list= list(filter(lambda x: (x%2 == 0) , my_list))
+print(new_list)
+
+Reduce
+
+Applies same operation to items of sequence
+used result of operation as first param of next operation
+
+retuns the item, not a list
+
+list[x,y,z] f() =>f(x,y) => f(result,z)=> item
+
+n=[3,4,5,6]
+3*4 =12
+12*5= 60
+60*6=360
+
+from functools import reduce
+print(reduce(lambda x,y:x*y,n))
+
+
+

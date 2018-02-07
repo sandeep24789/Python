@@ -1,0 +1,222 @@
+day3
+
+Dictionary
+
+in general we have a datastructure called associative array its otherwise called as map. In python we call that as dictionaries
+
+keys are immutable and values are mmutable
+
+>>> address={'name':'mathan','phno':9001234522,'address':'cdc'}
+>>> type(address)
+>>> dict (name="sam",no=123,loc="cdc")
+{'no': 123, 'loc': 'cdc', 'name': 'sam'}
+
+>>> for key in address.keys():
+	value=address[key]
+	print(key,"=", value)
+
+	
+loc = cdc
+age = 27
+name = mat
+
+
+>>> for key, value in address.items():
+	print(key,"=",value)
+
+	
+loc = cdc
+age = 27
+name = mat
+
+>>> address
+{'age': 27, 'name': 'mat'}
+
+for value in address.values():
+	print(value)
+>>> 
+
+>>> 27 in address
+False
+>>> "age" in address
+True	
+
+>>> mdict= address
+>>> address is mdict
+True
+>>> address["name"]="mathan"
+>>> mdict
+{'loc': 'cdc', 'age': 27, 'name': 'mathan'}
+>>> mdic=address.copy()
+>>> address["name"]="mat"
+>>> mdic
+{'loc': 'cdc', 'age': 27, 'name': 'mathan'}
+>>> address
+{'loc': 'cdc', 'age': 27, 'name': 'mat'}
+
+
+
+
+
+Implementing collections
+list
+set
+tuple
+dict
+
+
+Sequence (String,List,Tuple)
+Indexing
+
+x=[1,"ice cream",2.4]
+x[2]
+
+012345
+
+st="welcome to python session".split()
+st
+i=st.index['python']
+
+st[i]
+
+del 	
+ st[i]
+
+st.remove("welcome")
+
+adding and concadtenating
+
+x="welcome to"
+y="cdc"
+x+y
+
+multipy
+
+x="welcome"
+x*3
+c[21,23]
+d=c*3
+
+
+
+
+Checking the membership
+iterating
+x=[7,8,9]
+for index, item in enumerate(x):
+	print(index,item)
+
+
+number of items
+len(x)
+
+min(x)
+max(x)
+sorting
+count
+
+index(items)
+x="sample"
+print(x.index(m))
+
+
+unpacking
+
+x=["car","bike","bus"]
+a,b,c = x
+a
+b
+c
+
+append
+
+
+
+
+extend
+x=[1,2,3]
+y=[4,5,6]
+x.extend(y)
+
+
+insert
+
+x.inset(key,value)
+
+pop
+remove
+reverse
+
+x=[1,2,3]
+x.reverse()
+x
+ 
+sort
+x.sort()
+
+x.sort(reverse=True)
+
+x="welcome to accenture python session".split()
+
+x.sort(key=len)
+
+' '.join(x)
+
+
+
+set
+
+
+
+Iterables and iterations
+
+for i in [1, 2, 3, 4]:
+    print(i)
+
+iterable object and iterator objects
+
+iterable object can passed to the built in iter() function to get a n iterator object
+
+Iterator object can passed to the builtin function next() to get the next item
+x="welcome to python".split()
+y=iter(x)
+
+
+from collections import Counter
+c = Counter([1,2,3,4,5,1,2,1,6])
+print(sum(c.values()))
+
+Date & Time
+
+import time
+time.time()
+time.time()
+time.localtime(time.time())
+time.asctime()
+time.sleep(7)
+
+import datetime
+mdate=datetime.date(2017,7,23)
+print(mdate)
+
+
+tday=datetime.date.today()
+print(tday)
+print(tday.year)
+print(tday.day)
+print(tday.weekday) // monday 0 sunday 6
+print(tday.isoweekday)
+monday  1 sunday 7
+
+bday =datetime.date(11,2,1991)
+age=bday-tday
+print(age.days())
+print(age.total_seconds())
+
+
+
+
+import calendar
+print(calendar.month(1947,3))
+print(calendar.calendar(1999))
+calendar.isleap(2008)
